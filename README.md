@@ -1,6 +1,6 @@
 A bunch of hacks making [weeder](https://github.com/ndmitchell/weeder) work for projects built with [haskell.nix](https://github.com/input-output-hk/haskell.nix/)
 
-### Usage example
+## Usage example
 
 Suppose you have a project with three packages in a layout like this (note that package name and directory name may differ):
 
@@ -72,3 +72,10 @@ Run nix-build on the `weeder-script` derivation to generate the script, running 
 $ nix-build -A weeder-script -o run-weeder.sh  # generates the script
 $ ./run-weeder.sh  # runs weeder
 ```
+
+## About Serokell
+
+This library is maintained and funded with ❤️ by [Serokell](https://serokell.io/).
+The names and logo for Serokell are trademark of Serokell OÜ.
+
+We love open source software! See [our other projects](https://serokell.io/community?utm_source=github) or [hire us](https://serokell.io/hire-us?utm_source=github) to design, develop and grow your idea!
