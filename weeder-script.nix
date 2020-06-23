@@ -1,6 +1,7 @@
 { pkgs,  # nixpkgs package set
   local-packages,  # list of local haskell packages in the project and their subdirectories
-  hs-pkgs  # package set returned by `haskell-nix.stackProject`
+  hs-pkgs,  # package set returned by `haskell-nix.stackProject`
+  weeder  # weeder package
 }:
 
 with rec {
@@ -56,7 +57,7 @@ with rec {
     export PATH="${fake-stack}/bin:$PATH"
 
     # run weeder
-    ${pkgs.haskellPackages.weeder}/bin/weeder stack.yaml --dist dist-hi
+    ${weeder}/bin/weeder stack.yaml --dist dist-hi
   '';
 };
 

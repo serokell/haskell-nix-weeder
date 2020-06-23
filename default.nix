@@ -11,5 +11,6 @@
   '';
 
   # generates a script for running weeder
-  weeder-script = { local-packages, hs-pkgs }: import ./weeder-script.nix { inherit pkgs local-packages hs-pkgs; };
+  weeder-script = { local-packages, hs-pkgs, weeder ? pkgs.haskellPackages.weeder }:
+    import ./weeder-script.nix { inherit pkgs weeder local-packages hs-pkgs; };
 }
